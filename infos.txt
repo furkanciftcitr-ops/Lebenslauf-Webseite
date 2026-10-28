@@ -1,0 +1,3 @@
+1. git add . (Değişiklikleri hazırla)
+2. git commit -m "yeni guncelleme" (Paketle)
+3. git push (GitHub'a gönder)
