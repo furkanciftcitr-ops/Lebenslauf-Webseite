@@ -1,0 +1,40 @@
+.txtName{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    position: relative;
+    bottom: -120px;
+}
+
+.txtBeruf{
+    text-align: center;
+    color: white;
+    font-size: x-large;
+    position: relative;
+    bottom: -100px;
+}
+
+.image-placeholder{
+    width: 400px;
+    height: 400px;
+    color: red;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    bottom: 120px;
+    left: 150px;
+}
+
+.image-placeholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.txtIch{
+    color: green;
+}
+
+body {
+    background-color: #000a14;
+}
