@@ -1,3 +1,3 @@
 1. git add . (Änderungen vorbereiten)
-2. git commit -m „neues Update“ (Festschreiben)
+2. git commit -m "neues Update" (Festschreiben)
 3. git push (An GitHub senden)
