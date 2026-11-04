@@ -3,4 +3,62 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.name{
+    color:aquamarine;
+    font-size:xx-large;
+    position: relative;
+    margin-top: 115px;
+    left: 85px;
+}
+
+.job{
+    color: aquamarine;
+    font-size: x-large;
+    position: relative;
+    margin-top: -30px;
+    left: 120px;
+}
+
+.about{
+    color: white;
+    font-size: x-large;
+    position: relative;
+    margin-top: 425px;
+    left: 85px;
+}
+
+.about-text{
+    color:white;
+    font-size: x-large;
+    position: relative;
+    margin-top: -30px;
+    left: 120px;
+    max-width: 750px;
+}
+
+.knowledge{
+    color: white;
+    font-size: x-large;
+    position: relative;
+    margin-top: 200px;
+    left: 85px;
+}
+
+.knowledge-table{
+    color: white;
+    font-size: x-large;
+    position: relative;
+    margin-top: -30px;
+    left: 120px;
+}
+
+.projects{
+    color: white;
+    font-size: x-large;
+    position: relative;
+    margin-top: 200px;
+    left: 85px;
 }
