@@ -1,64 +1,208 @@
+::selection {
+    background-color: aquamarine;
+    color: #000a14;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #000a14;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    color: white;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-.name{
-    color:aquamarine;
-    font-size:xx-large;
-    position: relative;
-    margin-top: 115px;
-    left: 85px;
+html {
+    scroll-behavior: smooth;
 }
 
-.job{
-    color: aquamarine;
-    font-size: x-large;
-    position: relative;
-    margin-top: -30px;
-    left: 120px;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.about{
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000a28;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
     color: white;
-    font-size: x-large;
-    position: relative;
-    margin-top: 425px;
-    left: 85px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
-.about-text{
-    color:white;
-    font-size: x-large;
-    position: relative;
-    margin-top: -30px;
-    left: 120px;
+.nav-links a:hover {
+    color: aquamarine;
+}
+
+/* HEADER- & TEXT-GRUPPEN */
+.header-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* HOVER-EFFEKT: Vergrößert & färbt Name, Beruf ODER Über mich beim Drüberfahren */
+.header-group:hover .name h1,
+.header-group:hover .job p,
+.header-group:hover .about h2 {
+    color: aquamarine;
+    transform: scale(1.05);
+}
+
+.name h1 {
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    margin-top: 50px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.job p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ÜBER MICH: Exakt gleicher Stil wie der Name h1 oben */
+.about h2 {
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    margin-top: 300px; /* Behält den Abstand nach oben bei */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.scroll-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 225px;
+    margin-bottom: 50px;
+}
+
+.scroll-button button {
+    background-color: #000a14;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-button button:hover {
+    background-color: aquamarine;
+    color: #000a14;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(127, 255, 212, 0.3);
+}
+
+/* section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.knowledge {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid rgba(127, 255, 212, 0.2);
+    padding-bottom: 5px;
+}
+
+.about-text {
+    padding-left: 20px;
+}
+
+.knowledge-table {
+    padding-left: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
     max-width: 750px;
 }
 
-.knowledge{
-    color: white;
-    font-size: x-large;
-    position: relative;
-    margin-top: 200px;
-    left: 85px;
+.knowledge-table table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
 }
 
-.knowledge-table{
-    color: white;
-    font-size: x-large;
-    position: relative;
-    margin-top: -30px;
-    left: 120px;
+.knowledge-table td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.projects{
-    color: white;
-    font-size: x-large;
-    position: relative;
-    margin-top: 200px;
-    left: 85px;
+.projects h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid rgba(127, 255, 212, 0.2);
+    padding-bottom: 5px;
 }
+
+.projects-list ul {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    gap: 15px;
+}
+
+.projects-list ul a {
+    color: aquamarine;
+    text-decoration: none;
+} */
