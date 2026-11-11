@@ -2,8 +2,10 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -13,10 +15,8 @@
                 <li><a href="#ueber-mich">Über mich</a></li>
                 <li><a href="#kenntnisse">Kenntnisse</a></li>
                 <li><a href="#projekte">Projekte</a></li>
-                <li><a href="#zertifikate">Zertifikate</a></li>
                 <li><a href="#erfahrungen">Erfahrungen</a></li>
                 <li><a href="#kontaktdaten">Kontaktdaten</a></li>
-                <li><a href="#informationen">Informationen</a></li>
             </ul>
         </div>
 
@@ -31,7 +31,8 @@
         </div>
 
         <div class="scroll-button">
-            <button type="button" id="scrollID">Scrollen</button>
+            <button type="button" id="startScrollID">Scrollen</button>
+            <button type="button" id="kontaktdatenScrollID">Kontakte</button>
         </div>
 
         <div class="header-group id-group" id="ueber-mich">
@@ -44,55 +45,102 @@
             </div>
         </div>
 
-        <div class="knowledge">
-            <h2>Kenntnisse</h2>
+        <div class="header-group" id="kenntnisse">
+            <div class="knowledge">
+                <h2>Kenntnisse</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Sprachen & Web</h3>
+                    <ul>
+                        <li>C# & Python</li>
+                        <li>XAML</li>
+                        <li>JavaScript</li>
+                        <li>HTML & CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools & Datenbanken</h3>
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li>VS Code</li>
+                        <li>Git / GitHub</li>
+                        <li>MSSQL</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Software</h3>
+                    <ul>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                        <li>Word</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="knowledge-table">
-            <table style="width:50%">
-                <tr>
-                    <td>XAML</td>
-                    <td>HTML</td>
-                    <td>CSS</td>
-                    <td>JavaScript</td>
-                </tr>
-                <tr>
-                    <td>C#</td>
-                    <td>Python</td>
-                    <td>Java</td>
-                    <td>TypeScript</td>
-                </tr>
-                <tr>
-                    <td>Visual Studio</td>
-                    <td>VS Code</td>
-                    <td>IntelliJ IDEA</td>
-                    <td>MSSQL</td>
-                </tr>
-                <tr>
-                    <td>Excel</td>
-                    <td>PowerPoint</td>
-                    <td>Word</td>
-                    <td>Canva</td>
-                </tr>
-            </table>
+        <div class="header-group" id="projekte">
+            <div class="projects">
+                <h2>Projekte</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Portfolio Webseite</h3>
+                    <p>Projekt-Repository auf GitHub:</p>
+                    <a href="https://github.com/furkanciftcitr-ops/Lebenslauf-Webseite" target="_blank" rel="noopener noreferrer">Zum Repository &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Chat-App</h3>
+                    <p>Projekt-Repository auf GitHub:</p>
+                    <a href="https://github.com/furkanciftcitr-ops/Chat-App" target="_blank" rel="noopener noreferrer">Zum Repository &rarr;</a>
+                </div>
+            </div>
         </div>
 
-        <div class="projects" id="projekte">
-            <h2>Projekte</h2>
+        <div class="header-group" id="erfahrungen">
+            <div class="experience">
+                <h2>Erfahrungen</h2>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Erfahrung - 1</h3>
+                    <p>Firma: ???</p>
+                    <p>Zeit: ???</p>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Erfahrung - 2</h3>
+                    <p>Firma: ???</p>
+                    <p>Zeit: ???</p>
+                </div>
+            </div>
         </div>
 
-        <div class="projects-list">
-            <ul>
-                <li>
-                    <a href="https://github.com/furkanciftcitr-ops/Lebenslauf-Webseite">Portfolio-Webseite</a>
-                </li>
-                <li>
-                    <a href="https://github.com/furkanciftci/Chat-App">Chat-App</a>
-                </li>
-            </ul>
+        <div class="header-group" id="kontaktdaten">
+            <div class="contactDetails">
+                <h2>Kontaktdaten</h2>
+            </div>
+
+            <div class="contactDetails-grid">
+                <div class="contactDetails-card">
+                    <h3>Kontaktdaten</h3>
+                    <p>Telefonnummer: +43 690 10204926</p>
+                    <p>E-Mail: furkanciftcitr@gmail.com</p>
+                </div>
+
+                <div class="contactDetails-card">
+                    <h3>Social Media</h3>
+                    <p>GitHub: furkanciftcitr-ops</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script src="function.js"></script>
 </body> 
 </html>
