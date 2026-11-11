@@ -15,3 +15,23 @@ if (contactScrollBtn && contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 }
+
+const copyButtons = document.querySelectorAll('.copy-btn');
+
+copyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const textSpan = this.previousElementSibling;
+        const textToCopy = textSpan.textContent;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalText = this.textContent;
+            this.textContent = 'Kopiert! ✓';
+            
+            setTimeout(() => {
+                this.textContent = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('Fehler beim Kopieren: ', err);
+        });
+    });
+});
